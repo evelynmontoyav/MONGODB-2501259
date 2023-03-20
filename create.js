@@ -144,7 +144,11 @@ async function run(){
 
 
 // --------------------------- DROP ------------------------------------
-    await dropcollection(client);
+// DROP COLLECTION
+//     const result = await dropcollection(client);
+
+// DROP DATABASE
+        // const result = await dropdatabase(client);
         
     } 
     finally {
@@ -290,15 +294,15 @@ run().catch(console.dir);
 //                 localField: "name",
 //                 foreignField: "name",
 //                 as: "info"
-//             }
-//         },
-//         {$match:{$expr: {$gte: [{$size:`$${"info}`},1]}}},
-//         {$project:{_id:0, info:"$coments.body", name:1, lastname:1, email:1, edad:1, carrera:1 }}
+//             }},
+//             {$match:{$expr: {$gte: [{$size:`$${"info"}`},1]}}},
+//             {$project:{_id:0, Asignatura:"$info.asignatura", name:1, lastname:1, email:1, edad:1, carrera:1 }}
 //         ])
 //         return result
-//     }catch(error){
-//         console.log(error)
-//     }
+
+//         }catch(error){
+//                 console.log(error)
+//         }
 // }
 
 
@@ -336,9 +340,24 @@ run().catch(console.dir);
 // }
 
 // --------------------------- DROP ------------------------------------
+// DROP COLLECTION
+// const dropcollection = (client) =>{
+//         try{
+//                 const result = client.db("University").collection("Teachers").drop()
+//                 console.log("Se elimino una coleccion exitosamente")
+//                 return result
+//         }catch(error){
+//                 console.log(error)
+//         }
+// }
 
-// db.collection("Students").drop(function(err, delOK) {
-//     if (err) throw err;
-//     if (delOK) console.log("Colección eliminada correctamente");
-//     client.close();
-//   });
+// DROP DATABASE
+// const dropdatabase = (client) => {
+//         try{
+//                 const result = client.db("University").dropDatabase()
+//                 console.log("Se elimino con exito la base de datos")
+//                 return result
+//         }catch(error){
+//                 console.log(error)
+//         }
+// }
