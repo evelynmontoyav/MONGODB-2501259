@@ -1,0 +1,81 @@
+
+use ("University");
+
+// CREAR COLECCION DE ESTUDIANTES
+// db.createCollection("Students", {
+//     validator: {
+//         $jsonSchema: {
+//             properties: {
+//                 name: {
+//                     bsonType: "string"
+//                 },
+//                 lastname: {
+//                     bsonType: "string"
+//                 },
+//                 email: {
+//                     bsonType: "email: { $regex: /^\S+@\S+\.\S+$/ }"
+//                 },
+//                 edad: {
+//                     bsonType: "int"
+//                 },
+//                 carrera: {
+//                     bsonType: "string"
+//                 }
+//             }
+//         }
+//     }
+// })
+
+// CREAR COLECCION DE PROFESORES
+// db.createCollection("Teachers", {
+//     validator: {
+//         $jsonSchema: {
+//             properties: {
+//                 name: {
+//                     bsonType: "string"
+//                 },
+//                 lastname: {
+//                     bsonType: "string"
+//                 },
+//                 email: {
+//                     bsonType: "string"
+//                 },
+//                 telefono: {
+//                     bsonType: "string"
+//                 },
+//                 asignatura: {
+//                     bsonType: "string"
+//                 }
+//             }
+//         }
+//     }
+// })
+
+// CREAR COLECCION DE AULAS
+// db.createCollection("Aulas", {
+//     validator: {
+//         $jsonSchema: {
+//             properties: {
+//                 aula: {
+//                     bsonType: "int"
+//                 },
+//                 capacidad: {
+//                     bsonType: "int"
+//                 },
+//                 semestre: {
+//                     bsonType: "string"
+//                 },
+//                 tipo: {
+//                     bsonType: "string"
+//                 }
+//             }
+//         }
+//     }
+// })
+
+// --------------------------- DROP ------------------------------------
+// DROP COLLECTION
+// db.Aulas.drop();
+
+// DROP DATABASE
+// db.dropDatabase();
