@@ -123,7 +123,7 @@ async function run(){
 
 
 // --------------------------- LOOKUP ------------------------------------
-        // const result = await documentlookup (client);
+        // const result = documentlookup (client)
         // result.forEach(element=>{
         //     console.log(element)
         // })
@@ -287,16 +287,13 @@ run().catch(console.dir);
 //         const result = client.db("University").collection("Students").aggregate([{
 //             $lookup:{
 //                 from: "Teachers",
-//                 localField: "carrera",
-//                 foreignField: "asignatura",
+//                 localField: "name",
+//                 foreignField: "name",
 //                 as: "info"
 //             }
-//         },{
-//             $match:{
-//                 $expr: {$gte: [{$size:"$info"},1]}
-//             }
-//         }
-
+//         },
+//         {$match:{$expr: {$gte: [{$size:`$${"info}`},1]}}},
+//         {$project:{_id:0, info:"$coments.body", name:1, lastname:1, email:1, edad:1, carrera:1 }}
 //         ])
 //         return result
 //     }catch(error){
